@@ -47,10 +47,12 @@ character in regular expressions?
 """
 8. What does the following Python sequence print out?
 """
-
+import re
 x = 'From: Using the : character'
 y = re.findall('^F.+:', x)
 print(y)
+
+# ['From: Using the :']
 
 """
 9. What character do you add to the "+" or "*" to indicate
@@ -64,8 +66,10 @@ From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 What would the regular expression '\S+?@\S+' match?
 """
 
+import re
 sentence = "From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008"
 y = re.findall("\S+?@\S+", sentence)
 print(y)
 
+# ['stephen.marquard@uct.ac.za']
 
